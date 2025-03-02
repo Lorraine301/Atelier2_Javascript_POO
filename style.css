@@ -1,0 +1,261 @@
+/* ================== RESET & GLOBAL ================== */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/*Conteneur principal*/
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* ================== NAVIGATION ================== */
+.header {
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+    justify-content: space-between;
+    align-items: center;
+}
+.code {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 20px; 
+    background-color: rgb(223, 216, 216);
+}
+.black-text {
+    color: black;
+}
+
+.purple-text {
+    color: #6d3fd6;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links .active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ================== TITRE & BOUTONS ================== */
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Conteneur des boutons */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Bouton "Add New Post" */
+#add-post-btn {
+    background-color: #6d3fd6;;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Ombre */
+    font-size: 14px;
+}
+
+#add-post-btn:hover {
+    background-color: #af97c1;
+}
+
+/* Bouton "X" (Cancel) */
+#cancel-btn {
+    background-color: rgb(207, 201, 201);
+    color: white;
+    border: none;
+    padding: 2px 6px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 75px;
+    margin-top: 10px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+#cancel-btn:hover {
+    background-color: rgb(139, 7, 0);
+}
+
+/* ================== FORMULAIRE D'AJOUT ================== */
+#titre{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#add-post-form {
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 70px;
+    border: 1px solid black; 
+    border-radius: 0px;
+    margin-top: 10px;
+    width: 80%;
+    height: auto;
+    margin: 10px auto;
+    
+}
+
+
+/* Cacher le formulaire au début */
+.hidden {
+    display: none;
+}
+
+/* Champs du formulaire */
+#add-post-form input[type="text"],
+#add-post-form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+/* Cacher les posts quand le formulaire s'affiche */
+.hidden-form #posts-container {
+    display: none;
+}
+#titre {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: white;
+    border-left: 5px solid orange; /* Bordure orange continue à gauche */
+    padding: 5px 10px; 
+    display: inline-block; /* Ajustement du fond à la taille du texte */
+}
+#title{
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+}
+#description{
+    height: 150px; /* Augmentation de la hauteur */
+}
+
+/* Bouton "POST" */
+#add-post-form button {
+    background-color: #6d3fd6;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 50px;
+    margin-left: 900px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre */
+    cursor: pointer;
+}
+
+#add-post-form button:hover {
+    background-color: #af97c1;
+}
+
+/* ================== AFFICHAGE DES POSTS ================== */
+#posts-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Style des posts */
+.post {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.post h3 {
+    margin-top: 0;
+}
+
+.post p {
+    margin-bottom: 0;
+}
+
+/* ================== BOUTON SUPPRIMER ================== */
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+/* ================== FORMULAIRES LOGIN & SIGNUP ================== */
+.auth-container {
+    width: 350px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 50px auto;
+}
+
+.auth-container h2 {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.auth-container input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6d3fd6;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.auth-container button:hover {
+    background-color: #af97c1;
+}
+

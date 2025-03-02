@@ -1,0 +1,17 @@
+{
+    "posts": [
+        {
+            "title": "Premier Post",
+            "description": "Ceci est un post de test.",
+            "authorId": 1,
+            "date": "2025-03-02 12:00"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "username": "admin",
+            "password": "1234"
+        }
+    ]
+}

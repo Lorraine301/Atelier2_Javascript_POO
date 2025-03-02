@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <div class="header">
+        <div class="code">{<span class="black-text">CODE</span> <span class="purple-text">WALL</span>}</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">My Blogs</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="title-bar">
+            <h2>Your Blog Posts</h2>
+            <div class="btn-container">
+                <button id="add-post-btn">Add New Post</button>
+                <button id="cancel-btn" class="hidden">✖</button> 
+            </div>
+        </div>
+
+        <div id="posts-container"></div>
+
+        <!-- Formulaire caché par défaut -->
+         
+        <form id="add-post-form" class="hidden">
+            <h4 id="titre">Your Post</h4>
+            <input type="text" name="title" id="title" placeholder="Title" required><br>
+            <textarea name="description" id="description" placeholder="Description" required></textarea><br>
+            <button type="submit">POST</button>
+        </form>
+    </div>
+
+    <script src="Post.js"></script>
+    <script src="User.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
