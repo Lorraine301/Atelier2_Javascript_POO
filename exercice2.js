@@ -6,7 +6,10 @@ class Etudiant {
         this.age = age;
         this.cne = cne;
     }
-
+    toString() {
+        return `${this.prenom} ${this.nom} (Age: ${this.age}, CNE: ${this.cne})`;
+    }
+    
     etudier() {
         console.log(`${this.prenom} ${this.nom} est en train d'étudier.`);
     }
@@ -20,20 +23,24 @@ class Professeur {
         this.cin = cin;
     }
 
+    toString() {
+        return `Professeur ${this.nom} (Age: ${this.age}, CIN: ${this.cin})`;
+    }
+
     enseigner() {
         console.log(`Le professeur ${this.nom} donne un cours.`);
     }
 }
 
-// Liste des étudiants
+// Création d'une liste des étudiants
 let etudiants = [
     new Etudiant("RAHELIARISOA", "Lorraine", 22, "FSTT000113"),
     new Etudiant("RAVOAHIRANDRAMASY", "Marcelline", 20, "FSTT000115"),
     new Etudiant("TOKY", "Fitia", 19, "FSTT000156"),
 ];
 
-// Trier les étudiants par ordre alphabétique
+// Triage des étudiants par ordre alphabétique
 etudiants.sort((a, b) => a.nom.localeCompare(b.nom) || a.prenom.localeCompare(b.prenom));
 
 // Affichage des étudiants triés
-console.log(etudiants);
+console.log(etudiants.map(e => e.toString()).join("\n"));
